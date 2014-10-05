@@ -27,7 +27,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src
 export GREP_COLOR='1;37;41'    # foreground is red by default, this changes it to red background with white text
 export TITAN_HOME="~/src/titan-server-0.4.4"
-source /usr/local/bin/virtualenvwrapper.sh
+
 
 # Set up PATH
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
@@ -61,6 +61,12 @@ shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Virtual Env Wrapper
+VENV_WRAPPER_FILE=/usr/local/bin/virtualenvwrapper.sh
+if [ -f ~/$VENV_WRAPPER_FILE ]; then
+    source VENV_WRAPPER_FILE
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
