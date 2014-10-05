@@ -12,10 +12,10 @@ for dotfile in ${DOTFILES_LIST[@]}; do
     # Check if file is symbolic link and make backups
     if [ -L ~/$dotfile ]
     then 
-        #echo "~/$dotfile is a symlink"
-        dest=$(readlink ~/$dotfile)
-        echo "copying $dest to ~/$BACKUP_FILENAME..."
-        cp $dest ~/$BACKUP_FILENAME
+        echo "~/$dotfile is a symlink"
+        #dest=$(readlink ~/$dotfile)
+        #echo "copying $dest to ~/$BACKUP_FILENAME..."
+        #cp $dest ~/$BACKUP_FILENAME
     else 
         if [ -f ~/$dotfile ]
         then
@@ -24,7 +24,12 @@ for dotfile in ${DOTFILES_LIST[@]}; do
         fi
     fi
 
-    # Create symlink
-    rm ~/$dotfile
+    # Remove existing file or symlink
+    if [ -f ~/$dotfile ]
+    then
+        rm ~/$dotfile
+    fi
+
+    # Create symlink to the dotfile in the git project
     ln -s ~/src/dotfiles/$dotfile ~/$dotfile
 done
