@@ -7,6 +7,8 @@ alias mysqladmin=/usr/local/mysql-5.5.20-osx10.6-x86_64/bin/mysqladmin
 alias vagrnat=vagrant
 alias histroy=history
 alias status="git status"
+alias ppjson='python -m json.tool'
+
 
 # Memory usage debugging
 alias memtop='ps -eo pmem,pcpu,rss,vsize,args | sort -k 1 -r | more'
@@ -26,3 +28,7 @@ alias gotiger='cd ~/src/tiger; pwd;'
 alias goezcentos='cd ~/src/ezcentos; pwd;'
 alias gomineshaft='cd ~/src/mineshaft-services; pwd;'
 alias gocanary='cd ~/src/canary; pwd;'
+alias goracefinder='cd ~/src/racefinder; pwd;'
+alias gointerpol='cd ~/src/interpol; pwd;'
+alias gom2='cd ~/.m2; pwd;'
+alias gogeojabber='cd ~/src/geojabber; pwd;'
