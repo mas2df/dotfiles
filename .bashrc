@@ -15,18 +15,12 @@ WHITE='\e[0;37m'        # White
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PROMPT_COMMAND='history -a; echo -ne "\033]0;${PWD/#$HOME/~}\007"' # change tab name to current directory
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
 export CFLAGS=-Qunused-arguments export CPPFLAGS=-Qunused-arguments
-export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.4
-export M2=$M2_HOME/bin
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/src
 export GREP_COLOR='1;37;41'    # foreground is red by default, this changes it to red background with white text
 
 
 # Set up PATH
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
-PATH=$PATH:~/src/depot_tools
 export PATH
 
 # Add git branch to prompt
@@ -35,7 +29,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Bash prompt
-export PS1="\n\[$CYAN\]\t \[$GREEN\]\u@\h \[$YELLOW\]\w\[\033[m\]\[$PURPLE\]\$(__git_ps1)\[$WHITE\]\n\$ "
+export PS1="\n\[$CYAN\]\t \[$PURPLE\]\u@\h \[$YELLOW\]\w\[\033[m\]\[$PURPLE\]\$(__git_ps1)\[$WHITE\]\n\$ "
 
 set completion-ignore-case On
 
