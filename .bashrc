@@ -20,7 +20,7 @@ export GREP_COLOR='1;37;41'    # foreground is red by default, this changes it t
 
 
 # Set up PATH
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
 export PATH
 
 # Add git branch to prompt
