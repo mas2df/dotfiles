@@ -64,8 +64,8 @@ shopt -s checkwinsize
 
 # Virtual Env Wrapper
 VENV_WRAPPER_FILE=/usr/local/bin/virtualenvwrapper.sh
-if [ -f ~/$VENV_WRAPPER_FILE ]; then
-    source VENV_WRAPPER_FILE
+if [ -f $VENV_WRAPPER_FILE ]; then
+    source $VENV_WRAPPER_FILE
 fi
 
 # enable programmable completion features (you don't need to enable
